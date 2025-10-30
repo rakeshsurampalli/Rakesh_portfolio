@@ -872,6 +872,7 @@ document.addEventListener('DOMContentLoaded', createBackToTopButton);
 // Developer Terminal Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const devModeToggle = document.getElementById('dev-mode-toggle');
+    const devModeToggleMobile = document.getElementById('dev-mode-toggle-mobile');
     const devTerminal = document.getElementById('dev-terminal');
     const terminalBackdrop = document.getElementById('terminal-backdrop');
     const terminalClose = document.getElementById('terminal-close');
@@ -1006,12 +1007,26 @@ Feel free to reach out for opportunities!`
         }
     };
 
-    // Open terminal
-    devModeToggle?.addEventListener('click', () => {
+    // Function to open terminal (shared by both buttons)
+    function openTerminal() {
         terminalBackdrop.classList.add('active');
         devTerminal.classList.add('active');
         setTimeout(() => terminalInput.focus(), 300);
-    });
+        
+        // Close mobile menu if open
+        const navMenu = document.getElementById('nav-menu');
+        const hamburger = document.getElementById('nav-toggle');
+        if (navMenu && hamburger) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    }
+
+    // Open terminal - Desktop button
+    devModeToggle?.addEventListener('click', openTerminal);
+    
+    // Open terminal - Mobile button
+    devModeToggleMobile?.addEventListener('click', openTerminal);
 
     // Close terminal
     terminalClose?.addEventListener('click', () => {
@@ -1138,6 +1153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Resume Viewer Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const resumeToggle = document.getElementById('resume-toggle');
+    const resumeToggleMobile = document.getElementById('resume-toggle-mobile');
     const resumeBackdrop = document.getElementById('resume-backdrop');
     const resumeViewer = document.getElementById('resume-viewer');
     const resumeClose = document.getElementById('resume-close');
@@ -1148,6 +1164,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function openResumeViewer() {
         resumeBackdrop.classList.add('active');
         resumeViewer.classList.add('active');
+        
+        // Close mobile menu if open
+        const navMenu = document.getElementById('nav-menu');
+        const hamburger = document.getElementById('nav-toggle');
+        if (navMenu && hamburger) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
         
         // Try to load the PDF, if it fails, show error message
         const iframe = resumeFrame;
@@ -1161,8 +1185,14 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // Open resume viewer
+    // Open resume viewer - Desktop button
     resumeToggle?.addEventListener('click', (e) => {
+        e.preventDefault();
+        openResumeViewer();
+    });
+    
+    // Open resume viewer - Mobile button
+    resumeToggleMobile?.addEventListener('click', (e) => {
         e.preventDefault();
         openResumeViewer();
     });

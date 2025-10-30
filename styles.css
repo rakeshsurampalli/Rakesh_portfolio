@@ -281,6 +281,16 @@ body {
     gap: 1rem;
 }
 
+/* Hide mobile nav-actions by default (desktop) */
+.mobile-nav-actions {
+    display: none;
+}
+
+/* Show desktop nav-actions by default */
+.desktop-nav-actions {
+    display: flex;
+}
+
 .nav-resume {
     display: flex;
     align-items: center;
@@ -2210,22 +2220,54 @@ body {
         display: flex;
     }
 
-    .nav-actions {
-        position: fixed;
-        top: 70px;
-        right: 1rem;
-        background: var(--background);
-        border: 1px solid var(--border-light);
-        border-radius: var(--border-radius);
-        padding: 0.5rem;
-        box-shadow: var(--shadow-md);
-        z-index: 1001;
+    /* Hide desktop nav-actions on mobile */
+    .desktop-nav-actions {
+        display: none;
     }
 
-    .nav-actions .btn-sm,
-    .nav-actions .btn-dev-mode {
-        font-size: var(--font-size-xs);
-        padding: 0.4rem 0.8rem;
+    /* Show mobile nav-actions inside the menu */
+    .mobile-nav-actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        padding: 1.5rem 2rem;
+        border-top: 1px solid var(--border-light);
+        width: 100%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: var(--border-radius);
+    }
+
+    .mobile-nav-actions .btn-sm,
+    .mobile-nav-actions .btn-dev-mode {
+        font-size: var(--font-size-sm);
+        padding: 0.7rem 1.4rem;
+        border-radius: var(--border-radius);
+        min-width: 100px;
+        justify-content: center;
+    }
+
+    .mobile-nav-actions .btn-dev-mode {
+        background: var(--background-secondary);
+        border: 1px solid var(--border-medium);
+        color: var(--text-primary);
+    }
+
+    .mobile-nav-actions .btn-dev-mode:hover {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    /* Hide mobile nav-actions by default */
+    .nav-menu .mobile-nav-actions {
+        display: none;
+    }
+
+    /* Show mobile nav-actions when menu is active */
+    .nav-menu.active .mobile-nav-actions {
+        display: flex;
     }
 
     .hero-container {
