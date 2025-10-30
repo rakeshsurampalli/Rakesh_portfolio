@@ -24,7 +24,7 @@ body {
     /* Colors - Dark Theme */
     --primary-color: #6366f1;
     --secondary-color: #8b5cf6;
-    --accent-color: #06d6a0;
+    --accent-color: #ffffff;
     --text-primary: #ffffff;
     --text-secondary: #a8a8a8;
     --text-muted: #6b7280;
@@ -36,7 +36,7 @@ body {
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    --gradient-accent: linear-gradient(135deg, #06d6a0 0%, #3b82f6 100%);
+    --gradient-accent: linear-gradient(135deg, #ffffff 0%, #8b5cf6 100%);
     --gradient-text: linear-gradient(135deg, #ffffff 0%, #a8a8a8 100%);
     
     /* Shadows */
@@ -203,19 +203,20 @@ body {
 .hero-logo-text { display: none; }
 
 .hero-logo-role {
-    font-size: clamp(3.5rem, 16vw, 14rem);
+    font-size: clamp(2.8rem, 12vw, 10rem);
     font-weight: 900;
     margin: 0;
     font-family: 'Orbitron', 'Space Grotesk', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.02em;
+    line-height: 0.85;
     text-align: center;
     background: linear-gradient(135deg, #d7d7d7 0%, #a9a9a9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 0 22px rgba(255, 255, 255, 0.10);
-    opacity: 0.08; /* darker, subtler background title */
+    opacity: 0.08;
 }
 
 /* Smooth text swap for hero background title */
@@ -295,26 +296,29 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: var(--font-size-sm);
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    padding: 0.5rem 0;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-color);
+    color: var(--text-primary);
+    transform: translateY(-1px);
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -0.5rem;
-    left: 0;
+    bottom: 0;
+    left: 50%;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .nav-link:hover::after,
@@ -370,9 +374,10 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    position: relative; /* restore normal flow */
+    position: relative;
     z-index: 1;
-    padding-top: 6rem;
+    padding-top: 3.5rem;
+    gap: 1.5rem;
 }
 
 /* Internal hero scroller (invisible overlay) */
@@ -415,32 +420,35 @@ body {
 }
 
 .hero-greeting {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .greeting-text {
-    font-size: var(--font-size-lg);
-    color: var(--text-secondary);
-    font-weight: 500;
+    font-size: var(--font-size-base);
+    color: var(--accent-color);
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
+    opacity: 0.95;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-name {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.8rem, 4.2vw, 2.8rem);
     font-weight: 800;
     color: var(--text-primary);
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    line-height: 1.1;
+    letter-spacing: 0.15em;
+    line-height: 1.2;
     margin: 0.25rem 0 1.5rem 0;
     font-family: 'Space Grotesk', sans-serif;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {
     .hero-logo { top: 72%; }
-    .hero-logo-role { font-size: clamp(2.5rem, 18vw, 7rem); opacity: 0.1; }
+    .hero-logo-role { font-size: clamp(2rem, 15vw, 5.5rem); opacity: 0.08; line-height: 0.8; }
 }
 
 .hero-name.scrolled {
@@ -503,32 +511,53 @@ body {
 /* ===== HERO SOCIAL ICONS ===== */
 .hero-social {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .social-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
     color: var(--text-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.social-icon:hover::before {
+    width: 120%;
+    height: 120%;
 }
 
 .social-icon:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    color: var(--background);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+    border-color: transparent;
 }
 
 /* ===== HERO VISUAL ===== */
@@ -542,31 +571,32 @@ body {
 
 .profile-card {
     position: relative;
-    width: 420px;
-    height: 520px;
+    width: 380px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    margin-top: 1rem;
 }
 
 .profile-image {
     position: relative;
-    width: 420px;
-    height: 480px;
+    width: 380px;
+    height: 440px;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     margin-bottom: 1rem;
-    background: transparent !important; /* hide card background */
-    border: none !important;            /* hide card border */
-    box-shadow: none !important;        /* hide card shadow */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     outline: none;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    will-change: transform; /* hint GPU */
-    transition: none; /* smoothing handled via rAF */
+    will-change: transform;
+    transition: none;
 }
 
 .image-container {
@@ -1837,7 +1867,7 @@ body {
     }
     
     .hero-logo-role {
-        font-size: clamp(3.5rem, 14vw, 12rem);
+        font-size: clamp(2.5rem, 10vw, 8rem);
     }
     
     .profile-card {
@@ -1870,31 +1900,43 @@ body {
     }
     
     .hero-container {
-        padding-top: 5rem;
+        padding-top: 3rem;
+        gap: 1.2rem;
     }
     
     .hero-name {
-        font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-        letter-spacing: 0.15em;
+        font-size: clamp(1.6rem, 4.2vw, 2.2rem);
+        letter-spacing: 0.12em;
+        margin-bottom: 1rem;
     }
     
     .hero-logo-role {
-        font-size: clamp(3rem, 12vw, 10rem);
+        font-size: clamp(2.2rem, 9vw, 7rem);
     }
     
     .hero-description {
         font-size: var(--font-size-base);
-        max-width: 550px;
+        max-width: 500px;
     }
     
     .profile-card {
-        width: 350px;
-        height: 440px;
+        width: 320px;
+        height: 400px;
     }
     
     .profile-image {
-        width: 350px;
-        height: 400px;
+        width: 320px;
+        height: 360px;
+    }
+    
+    .hero-social {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-icon {
+        width: 44px;
+        height: 44px;
     }
     
     .about-content {
@@ -2111,6 +2153,38 @@ body {
         --font-size-3xl: 1.5rem;
         --section-padding: 3rem 0;
         --container-padding: 0 1rem;
+    }
+
+    .hero-container {
+        padding-top: 2.5rem;
+        gap: 1rem;
+    }
+    
+    .hero-name {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+        letter-spacing: 0.1em;
+        margin-bottom: 0.8rem;
+    }
+    
+    .profile-card {
+        width: 280px;
+        height: 340px;
+    }
+    
+    .profile-image {
+        width: 280px;
+        height: 300px;
+    }
+    
+    .hero-social {
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 
     .nav-menu {
