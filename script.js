@@ -189,11 +189,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     // Background title changes while scrolling through hero
     if (heroSection && heroRoleText) {
         const titles = [
-            'SOFTWARE DEVELOPER',
+            'AI.SOFTWARE DEVELOPER',
             'FULL‑STACK DEVELOPER',
             'BACKEND DEVELOPER',
             'DATABASE MANAGER',
-            'API DEVELOPER',
+            'AI ENGINEER',
             'CLOUD ENGINEER',
             'PRODUCT DEVELOPER'
         ];

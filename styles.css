@@ -420,6 +420,8 @@ body {
     z-index: 0; /* behind hero content but above background */
 }
 
+
+
 .hero-content {
     max-width: 800px;
     animation: slideInLeft 0.8s ease-out;
