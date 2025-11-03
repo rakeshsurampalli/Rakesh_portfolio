@@ -193,6 +193,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             'FULL‑STACK DEVELOPER',
             'BACKEND DEVELOPER',
             'DATABASE MANAGER',
+            'SECURITY ENGINEER',
             'AI ENGINEER',
             'CLOUD ENGINEER',
             'PRODUCT DEVELOPER'
@@ -277,7 +278,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         cards.forEach(c => io.observe(c));
 
         let stickyTops = [];
-        let step = Math.max(400, window.innerHeight * 0.9);
+        let step = Math.max(400, window.innerHeight * 0.95);
         let thresholds = [];
 
         const recompute = () => {
@@ -892,53 +893,91 @@ ${Object.keys(commands).map(cmd => `  ${cmd.padEnd(15)} - ${commands[cmd].descri
         about: {
             description: 'About Rakesh Surampalli',
             action: () => `👨‍💻 Rakesh Surampalli
-🎓 Software Developer & Full-Stack Engineer
-🌟 Passionate about creating innovative web solutions
-📍 Currently working on modern web applications
-💼 Experienced in React, Node.js, Python, and more`
+🎓 Full-Stack Developer | Data Scientist | Product Developer 
+🌟 Passionate about building AI-powered, scalable applications integrating data, cloud, and automation.
+📍 Creator of platforms like FinAI, Tudu, and Atharva — blending analytics, intelligence, and user experience.
+🌎 Committed to crafting innovative digital solutions that bridge technology, data, and human insight.
+💼 Experienced in Python, Django, React, Azure, and Machine Learning.`
         },
         skills: {
             description: 'Technical skills and expertise',
             action: () => `🔧 Technical Skills:
-Frontend: React, Vue.js, JavaScript, HTML5, CSS3, Sass
-Backend: Node.js, Python, PHP, Express.js
-Database: MongoDB, MySQL, PostgreSQL
-Tools: Git, Docker, AWS, VS Code, Figma
-Architecture: REST APIs, Microservices, CI/CD`
+💻  Frontend:
+   • React.js · Next.js · Vue.js · JavaScript (ES6+) · HTML5 · CSS3 · Tailwind · Sass
+
+⚙️  Backend:
+   • Python · Django · Flask · Node.js · Express.js · RESTful APIs · GraphQL
+
+📊  Data Science / AI:
+   • Pandas · NumPy · Scikit-learn · TensorFlow · PyTorch · OpenCV · NLP · Data Visualization
+
+☁️  Cloud & DevOps:
+   • Azure · AWS · GCP · Docker · Kubernetes · GitHub Actions · CI/CD Pipelines
+
+🧩  Databases:
+   • PostgreSQL · MySQL · MongoDB · DynamoDB · SQLite
+
+🛠️  Tools & Platforms:
+   • Git · VS Code · Postman · Figma · Tableau · Power BI · Linux Shell
+
+🧰  Architecture & Practices:
+   • Microservices · Clean Architecture · API Security · Agile Development`
         },
         experience: {
             description: 'Work experience and roles',
             action: () => `💼 Work Experience:
-[01] Software Developer • Company A (2024 - Present)
-     Built responsive web apps and optimized performance
-     
-[02] Frontend Engineer • Company B (2023 - 2024)
-     Delivered component libraries and design systems
-     
-[03] Full-Stack Intern • Company C (2021 - 2023)
-     Assisted with feature development and testing`
+[01]  Full-Stack Developer • CVS Health (2023 – Present)
+     • Built AI-powered security analytics and dashboard platforms for the Security Team using Django, React, and Azure.  
+     • Integrated NLP-based threat summarization models and automated cloud pipelines with Docker and GitHub Actions.  
+
+[02]  Data Analytics Engineer • Copart (2022 – 2023)
+     • Optimized vehicle auction analytics using Python and SQL, designing dynamic Tableau dashboards.  
+     • Automated ETL data flows and migrated on-prem databases to GCP, improving scalability and reporting efficiency.  
+
+[03]  Backend Developer Intern • Toyama Automation (2019 – 2021)
+     • Developed Django-based IoT backend integrated with AWS and Alexa for smart home automation.  
+     • Reduced API latency by 40% using Dockerized microservices and time-based automation logic.  
+
+⚙️  Key Skills Applied: Python · Django · React · Azure · SQL · AWS · Docker · Tableau · Machine Learning · CI/CD`
         },
         projects: {
             description: 'Featured projects and work',
             action: () => `🚀 Featured Projects:
-• E-Commerce Platform - Full-featured shopping solution
-• Task Management App - Collaborative project management
-• Weather Dashboard - Real-time weather application
-• Blog Platform - Modern content management system
+[01]  FinAI – AI-Powered Financial Intelligence Platform
+     • Performs stock prediction, portfolio analysis, and real-time benchmarking using ML, GPT insights, and Alpha Vantage APIs.  
+     • Includes sentiment scoring, fake-news detection, and financial ratio visualization through interactive dashboards.  
 
-Type 'github' to visit my GitHub profile`
+[02]  Tudu – Smart Task Planning & Productivity App
+     • AI-driven assistant that analyzes tasks, optimizes schedules, and integrates Google Maps for location-based shopping and errands.  
+     • Built with Django & React, featuring GPT suggestions, group collaboration, and PDF/CSV export tools.  
+
+[03]  Atharva – AgriSmart IoT & Marketplace Platform
+     • AI + IoT solution empowering farmers through crop recommendation, soil sensors, and direct farmer-to-buyer marketplace.  
+     • Integrates smart irrigation, weather alerts, and government/FPO collaboration features with embedded IoT analytics.  
+
+💡  Type 'github' to view source code or 'contact' to connect with me.`
         },
         contact: {
             description: 'Contact information',
             action: () => `📧 Contact Information:
-Email: your.email@example.com
-Phone: +1 (555) 123-4567
-Location: Your City, Country
-LinkedIn: https://www.linkedin.com/in/rakeshsurampalli27/
-GitHub: https://github.com/rakeshsurampalli
+✉️ Email: rakeshsurampalli@gmail.com
+📞 Phone: +1 (469) 927-3770
+📍 Location: Dallas, TX
 
-Feel free to reach out for opportunities!`
+🔗 LinkedIn: https://www.linkedin.com/in/rakeshsurampalli27/
+💻 GitHub: https://github.com/rakeshsurampalli
+
+🕓  Available for full-time Data Science, Software, and Product Development roles.
+
+🤝 Feel free to reach out for opportunities!`
         },
+        email: {
+            description: 'Send an email',
+            action: () => {
+                window.open('mailto:rakeshsurampalli@gmail.com?subject=Opportunity%20with%20your%20skills%20and%20experience&body=Hi%20Rakesh%2C%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20was%20impressed%20by%20your%20expertise%20in%20AI%2C%20Data%20Science%2C%20and%20Full-Stack%20Development.%20We%20have%20an%20exciting%20opportunity%20that%20aligns%20well%20with%20your%20skills.%0D%0A%0D%0APlease%20let%20me%20know%20a%20convenient%20time%20for%20a%20conversation.%0D%0A%0D%0ABest%20Regards%2C%0D%0A%5BYour%20Name%5D', '_blank');
+                return '📧 Opening email client...';
+            }
+        },   
         github: {
             description: 'Open GitHub profile',
             action: () => {
