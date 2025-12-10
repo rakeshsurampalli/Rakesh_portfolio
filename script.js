@@ -1220,7 +1220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         iframe.onerror = function() {
             console.log('PDF failed to load, trying alternative path');
             // Try alternative path
-            iframe.src = '../RAKESH_Resume_Product_Developer.pdf';
+            iframe.src = '../Rakesh_Resume_Product_Developer.pdf';
         };
     }
 
@@ -1253,7 +1253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Download resume with multiple path attempts
     resumeDownload?.addEventListener('click', () => {
         const link = document.createElement('a');
-        link.href = './RAKESH_Resume_Product_Developer.pdf';
+        link.href = './Rakesh_Resume_Product_Developer.pdf';
         link.download = 'Rakesh_Surampalli_Resume.pdf';
         document.body.appendChild(link);
         link.click();
