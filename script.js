@@ -927,7 +927,7 @@ ${Object.keys(commands).map(cmd => `  ${cmd.padEnd(15)} - ${commands[cmd].descri
             description: 'Work experience and roles',
             action: () => `💼 Work Experience:
 [01]  Full-Stack Developer • CVS Health (2023 – Present)
-     • Built AI-powered security analytics and dashboard platforms for the Security Team using Django, React, and Azure.  
+     • Built an AI-powered analytics and dashboard platform using Django, React, and Azure, enabling near real-time insights and automated reporting for internal teams. 
      • Integrated NLP-based threat summarization models and automated cloud pipelines with Docker and GitHub Actions.  
 
 [02]  Data Analytics Engineer • Copart (2022 – 2023)
