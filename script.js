@@ -895,7 +895,7 @@ ${Object.keys(commands).map(cmd => `  ${cmd.padEnd(15)} - ${commands[cmd].descri
             action: () => `👨‍💻 Rakesh Surampalli
 🎓 Full-Stack Developer | Data Scientist | Product Developer 
 🌟 Passionate about building AI-powered, scalable applications integrating data, cloud, and automation.
-📍 Creator of platforms like FinAI, Tudu, and Atharva — blending analytics, intelligence, and user experience.
+📍 Creator of platforms like FinAI, Tudu, and Bhuchakra — blending analytics, intelligence, and user experience.
 🌎 Committed to crafting innovative digital solutions that bridge technology, data, and human insight.
 💼 Experienced in Python, Django, React, Azure, and Machine Learning.`
         },
@@ -951,7 +951,7 @@ ${Object.keys(commands).map(cmd => `  ${cmd.padEnd(15)} - ${commands[cmd].descri
      • AI-driven assistant that analyzes tasks, optimizes schedules, and integrates Google Maps for location-based shopping and errands.  
      • Built with Django & React, featuring GPT suggestions, group collaboration, and PDF/CSV export tools.  
 
-[03]  Atharva – AgriSmart IoT & Marketplace Platform
+[03]  Bhuchakra – AgriSmart IoT & Marketplace Platform
      • AI + IoT solution empowering farmers through crop recommendation, soil sensors, and direct farmer-to-buyer marketplace.  
      • Integrates smart irrigation, weather alerts, and government/FPO collaboration features with embedded IoT analytics.  
 
