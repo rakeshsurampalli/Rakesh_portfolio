@@ -1,0 +1,21 @@
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/*
+!.vscode/tasks.json
+.idea/
+
+# Node (not used by the site itself, but keeps stray installs out)
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Local build scratch
+_source/
+*.log
