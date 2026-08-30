@@ -2,653 +2,805 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rakesh Surampalli - Software Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script>document.documentElement.classList.add('js');</script>
+
+    <title>Rakesh Surampalli — Full-Stack &amp; AI Engineer | Dallas, TX</title>
+    <meta name="description" content="Full-stack engineer in Dallas building LLM-powered services and Azure data platforms. Currently at CVS Health. Portfolio as a desktop.">
+    <meta name="author" content="Rakesh Surampalli">
+    <link rel="canonical" href="https://rakeshsurampalli.github.io/Rakesh_portfolio/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#141028">
+    <meta name="color-scheme" content="dark">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Rakesh Surampalli">
+    <meta property="og:title" content="Rakesh Surampalli — Full-Stack &amp; AI Engineer">
+    <meta property="og:description" content="Full-stack engineer in Dallas building LLM-powered services and Azure data platforms. Currently at CVS Health.">
+    <meta property="og:url" content="https://rakeshsurampalli.github.io/Rakesh_portfolio/">
+    <meta property="og:image" content="https://rakeshsurampalli.github.io/Rakesh_portfolio/img/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Rakesh Surampalli — portfolio as a macOS desktop">
+    <meta property="og:locale" content="en_US">
+    <meta property="profile:first_name" content="Rakesh">
+    <meta property="profile:last_name" content="Surampalli">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rakesh Surampalli — Full-Stack &amp; AI Engineer">
+    <meta name="twitter:description" content="Full-stack engineer in Dallas building LLM-powered services and Azure data platforms.">
+    <meta name="twitter:image" content="https://rakeshsurampalli.github.io/Rakesh_portfolio/img/og-cover.jpg">
+
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preload" as="font" href="fonts/pacifico.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/inter-var.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="img/hero-avatar-380.webp" type="image/webp" fetchpriority="high">
+
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="script.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://rakeshsurampalli.github.io/Rakesh_portfolio/#person",
+      "name": "Rakesh Surampalli",
+      "givenName": "Rakesh",
+      "familyName": "Surampalli",
+      "url": "https://rakeshsurampalli.github.io/Rakesh_portfolio/",
+      "image": "https://rakeshsurampalli.github.io/Rakesh_portfolio/img/hero-avatar-760.webp",
+      "jobTitle": "Full-Stack Software Engineer",
+      "email": "mailto:rakeshsurampalli@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dallas", "addressRegion": "TX", "addressCountry": "US" },
+      "worksFor": { "@type": "Organization", "name": "CVS Health" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "The University of Texas at Dallas" },
+        { "@type": "CollegeOrUniversity", "name": "Manipal Institute of Technology" }
+      ],
+      "knowsAbout": ["Python","Django","React","Microsoft Azure","Docker","Kubernetes","Large Language Models","PostgreSQL","Data Engineering","REST APIs","CI/CD"],
+      "sameAs": ["https://www.linkedin.com/in/rakeshsurampalli27/","https://github.com/rakeshsurampalli"]
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Rakesh Surampalli</a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#experience" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <!-- Mobile nav actions -->
-                <div class="nav-actions mobile-nav-actions">
-                    <div class="nav-resume">
-                        <a href="#" id="resume-toggle-mobile" class="btn btn-outline btn-sm">Resume</a>
-                    </div>
-                    <div class="dev-mode-btn">
-                        <button id="dev-mode-toggle-mobile" class="btn-dev-mode" title="Developer Mode">
-                            <i class="fas fa-terminal"></i>
-                            <span>Dev Mode</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-actions desktop-nav-actions">
-                <div class="nav-resume">
-                    <a href="#" id="resume-toggle" class="btn btn-outline btn-sm">Resume</a>
-                </div>
-                <!-- Dev Mode Button -->
-                <div class="dev-mode-btn">
-                    <button id="dev-mode-toggle" class="btn-dev-mode" title="Developer Mode">
-                        <i class="fas fa-terminal"></i>
-                        <span>Dev Mode</span>
-                    </button>
-                </div>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- Hero Logo -->
-        <div class="hero-logo">
-            <p class="hero-logo-role">SOFTWARE DEVELOPER</p>
-        </div>
-        <!-- Hero internal scroller overlay -->
-        <div id="hero-scroller" class="hero-scroller" aria-hidden="true">
-            <div class="hero-scroller-content"></div>
-        </div>
-        <!-- Particles canvas -->
-        <canvas id="hero-particles"></canvas>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-greeting">
-                    <span class="greeting-text">Hi, I am</span>
-                </div>
-                <h1 class="hero-name">RAKESH SURAMPALLI</h1>
+<!-- ===== Icon sprite ===== -->
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-finder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ec2f8"/><stop offset="1" stop-color="#1b83e6"/></linearGradient>
+    <linearGradient id="g-term" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c4c50"/><stop offset="1" stop-color="#1c1c1e"/></linearGradient>
+    <linearGradient id="g-find" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ce07f"/><stop offset="1" stop-color="#12a54a"/></linearGradient>
+    <linearGradient id="g-notes" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe57a"/><stop offset="1" stop-color="#f7c948"/></linearGradient>
+    <linearGradient id="g-prev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8d8ff"/><stop offset="1" stop-color="#4a9eff"/></linearGradient>
+    <linearGradient id="g-mail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fc9ff"/><stop offset="1" stop-color="#1a7ef0"/></linearGradient>
+    <linearGradient id="g-gh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3a3e"/><stop offset="1" stop-color="#131316"/></linearGradient>
+    <linearGradient id="g-safari" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3ec6ff"/><stop offset="1" stop-color="#0a7ae0"/></linearGradient>
+    <linearGradient id="g-folder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ecbf5"/><stop offset="1" stop-color="#57a8ea"/></linearGradient>
+    <linearGradient id="g-folder2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b7defb"/><stop offset="1" stop-color="#6fb6ee"/></linearGradient>
+    <linearGradient id="g-li" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b9fe0"/><stop offset="1" stop-color="#0a66c2"/></linearGradient>
+  </defs>
 
-                <!-- Social Links -->
-                <div class="hero-social">
-                    <a href="https://www.linkedin.com/in/rakeshsurampalli27/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/rakeshsurampalli" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Portfolio">
-                        <i class="fas fa-briefcase"></i>
-                    </a>
-                </div>
-                
-            </div>
-            <div class="hero-visual">
-                <div class="profile-card">
-                    <div class="profile-image" id="hero-avatar">
-                        <div class="image-container">
-                            <img src="hero-avatar.png" alt="Hero Avatar" class="avatar-img">
-                            <div class="profile-placeholder">
-                                <i class="fas fa-user"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="floating-elements">
-                        <div class="floating-element" data-tech="React">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <div class="floating-element" data-tech="Node.js">
-                            <i class="fab fa-node-js"></i>
-                        </div>
-                        <div class="floating-element" data-tech="JavaScript">
-                            <i class="fab fa-js-square"></i>
-                        </div>
-                        <div class="floating-element" data-tech="Python">
-                            <i class="fab fa-python"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <symbol id="app-finder" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="url(#g-finder)"/>
+    <path d="M32 6v52" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/>
+    <circle cx="21" cy="26" r="2.6" fill="#0b2b4a"/><circle cx="43" cy="26" r="2.6" fill="#0b2b4a"/>
+    <path d="M20 41c4 4.5 8 6.5 12 6.5s8-2 12-6.5" stroke="#0b2b4a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="app-terminal" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="url(#g-term)"/>
+    <rect x="5" y="5" width="54" height="54" rx="11" fill="#0e0e10"/>
+    <path d="m17 22 10 9-10 9" stroke="#f4f4f5" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M31 41h15" stroke="#f4f4f5" stroke-width="3.4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="app-findmy" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="#f2f5f4"/>
+    <circle cx="32" cy="32" r="22" fill="none" stroke="url(#g-find)" stroke-width="3" opacity=".35"/>
+    <circle cx="32" cy="32" r="14" fill="none" stroke="url(#g-find)" stroke-width="3" opacity=".6"/>
+    <circle cx="32" cy="32" r="7" fill="url(#g-find)"/>
+  </symbol>
+
+  <symbol id="app-notes" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="url(#g-notes)"/>
+    <rect width="64" height="15" rx="14" fill="#f0b429"/><rect y="10" width="64" height="5" fill="#f0b429"/>
+    <g stroke="#a9781a" stroke-width="2.6" stroke-linecap="round" opacity=".65">
+      <path d="M15 27h34"/><path d="M15 36h34"/><path d="M15 45h22"/>
+    </g>
+  </symbol>
+
+  <symbol id="app-preview" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="#f5f7fa"/>
+    <rect x="12" y="9" width="30" height="40" rx="3" fill="url(#g-prev)" opacity=".9"/>
+    <circle cx="38" cy="38" r="12" fill="none" stroke="#1f6fd0" stroke-width="4"/>
+    <path d="m47 47 8 8" stroke="#1f6fd0" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="app-mail" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="url(#g-mail)"/>
+    <rect x="11" y="19" width="42" height="27" rx="5" fill="#fff"/>
+    <path d="m13 22 19 14 19-14" stroke="#1a7ef0" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="app-github" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="url(#g-gh)"/>
+    <g transform="translate(14 14) scale(1.5)">
+      <path fill="#fff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </g>
+  </symbol>
+
+  <symbol id="app-linkedin" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="url(#g-li)"/>
+    <g transform="translate(15 15) scale(1.42)" fill="#fff">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452z"/>
+    </g>
+  </symbol>
+
+  <symbol id="app-safari" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="url(#g-safari)"/>
+    <circle cx="32" cy="32" r="23" fill="#f3f7fb"/>
+    <circle cx="32" cy="32" r="23" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="1"/>
+    <path d="M45 19 27 27l-8 18 18-8z" fill="#ff4a4a"/>
+    <path d="M32 32 27 27l18-8z" fill="#e0e6ee"/>
+    <circle cx="32" cy="32" r="2.4" fill="#fff"/>
+  </symbol>
+
+  <symbol id="app-photos" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="#fbfbfd"/>
+    <g transform="translate(32 32)">
+      <ellipse rx="6" ry="13" fill="#ffcf3f"/>
+      <ellipse rx="6" ry="13" fill="#ff8a3d" transform="rotate(60)"/>
+      <ellipse rx="6" ry="13" fill="#ff4d6d" transform="rotate(120)"/>
+      <ellipse rx="6" ry="13" fill="#b45bff" transform="rotate(180)"/>
+      <ellipse rx="6" ry="13" fill="#3d9bff" transform="rotate(240)"/>
+      <ellipse rx="6" ry="13" fill="#3ddc84" transform="rotate(300)"/>
+      <circle r="5" fill="#fff" opacity=".85"/>
+    </g>
+  </symbol>
+
+  <symbol id="i-folder-lg" viewBox="0 0 64 64">
+    <path d="M4 16a5 5 0 0 1 5-5h14l5 6h27a5 5 0 0 1 5 5v30a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z" fill="url(#g-folder)"/>
+    <path d="M4 24h56v22a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z" fill="url(#g-folder2)"/>
+  </symbol>
+
+  <symbol id="i-pdf" viewBox="0 0 64 64">
+    <path d="M12 6h27l13 13v39a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3z" fill="#f4f6f9"/>
+    <path d="M39 6l13 13H42a3 3 0 0 1-3-3z" fill="#c9d3de"/>
+    <rect x="9" y="34" width="34" height="15" rx="3" fill="#e03e3e"/>
+    <text x="26" y="45" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="bold" fill="#fff">PDF</text>
+  </symbol>
+
+  <symbol id="i-dog" viewBox="0 0 24 24">
+    <ellipse cx="4.9" cy="12.2" rx="2.7" ry="6.1" fill="currentColor" transform="rotate(-11 4.9 12.2)"/>
+    <ellipse cx="19.1" cy="12.2" rx="2.7" ry="6.1" fill="currentColor" transform="rotate(11 19.1 12.2)"/>
+    <path fill="currentColor" fill-rule="evenodd" d="M12 4.6c3.7 0 6.7 2.9 6.7 6.5v2.2c0 3.5-3 6.3-6.7 6.3s-6.7-2.8-6.7-6.3v-2.2c0-3.6 3-6.5 6.7-6.5zM9.5 10.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM14.5 10.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 14.7c-1.15 0-2.05.62-2.05 1.4s.9 1.4 2.05 1.4 2.05-.62 2.05-1.4-.9-1.4-2.05-1.4z"/>
+  </symbol>
+
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8.8a16 16 0 0 1 20 0M5 12.3a11 11 0 0 1 14 0M8.5 15.8a6 6 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-control" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 28 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="8" width="20" height="10" rx="3"/><path d="M25 12v4" stroke-linecap="round"/><rect x="4" y="10" width="14" height="6" rx="1.5" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.5A2.5 2.5 0 0 1 4.5 4h4l2 2.5h9A2.5 2.5 0 0 1 22 9v8.5a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 17.5z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+</svg>
+
+<!-- ===== Boot screen ===== -->
+<div class="boot" id="boot" aria-hidden="true">
+  <span class="boot-bg"></span>
+  <p class="boot-word"><span>hello</span></p>
+  <button type="button" class="boot-skip" id="boot-skip">Skip</button>
+</div>
+
+<a class="skip-link" href="#findmy">Skip to profile</a>
+
+<!-- ===== Menu bar ===== -->
+<div class="menubar" role="banner">
+  <div class="menubar-left">
+    <button type="button" class="mb-mark" id="mb-mark" aria-haspopup="true" aria-expanded="false" aria-label="Main menu"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-dog"/></svg></button>
+    <strong class="mb-app" id="mb-app">Find My</strong>
+    <span class="mb-item">File</span><span class="mb-item">Edit</span><span class="mb-item">View</span>
+    <button type="button" class="mb-item mb-btn" id="mb-window" aria-haspopup="true" aria-expanded="false">Window</button>
+    <span class="mb-item">Help</span>
+  </div>
+  <div class="menubar-right">
+    <span class="mb-glyph" title="Open to work">Open to work</span>
+    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-battery"/></svg>
+    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wifi"/></svg>
+    <button type="button" class="mb-icon-btn" id="mb-search" aria-label="Spotlight Search"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg></button>
+    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-control"/></svg>
+    <time id="mb-clock" class="mb-clock">—</time>
+  </div>
+</div>
+
+<!-- ===== Desktop ===== -->
+<main class="desktop" id="desktop">
+  <div class="wallpaper" aria-hidden="true"><span class="wp-a"></span><span class="wp-b"></span><span class="wp-grain"></span></div>
+
+  <!-- ---------- Desktop icons ---------- -->
+  <ul class="desk-icons" id="desk-icons">
+    <li><button type="button" data-open="finder">
+      <svg class="di-glyph" aria-hidden="true" focusable="false"><use href="#i-folder-lg"/></svg>
+      <span>Projects</span></button></li>
+    <li><button type="button" data-open="photos">
+      <svg class="di-glyph" aria-hidden="true" focusable="false"><use href="#i-folder-lg"/></svg>
+      <span>Screenshots</span></button></li>
+    <li><button type="button" data-open="notes" data-note="cs-finai">
+      <svg class="di-glyph" aria-hidden="true" focusable="false"><use href="#i-folder-lg"/></svg>
+      <span>Case Studies</span></button></li>
+    <li><button type="button" data-open="preview">
+      <svg class="di-glyph di-pdf" aria-hidden="true" focusable="false"><use href="#i-pdf"/></svg>
+      <span>R&eacute;sum&eacute;.pdf</span></button></li>
+  </ul>
+
+  <!-- ---------- Find My : About ---------- -->
+  <section class="window win-findmy is-open" id="findmy" data-app="findmy" data-x="64" data-y="108" data-w="812" data-h="616"
+           role="dialog" aria-label="Find My — About Rakesh Surampalli">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Find My"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Find My"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Find My"></button>
+      </div>
+      <p class="title">Find My</p>
+    </header>
+
+    <div class="win-body findmy-body">
+      <aside class="fm-sidebar">
+        <p class="fm-tabs"><span class="is-on">People</span><span>Devices</span><span>Items</span></p>
+        <ul class="fm-people">
+          <li class="is-selected">
+            <picture><source type="image/webp" srcset="img/hero-avatar-380.webp"><img src="img/hero-avatar.png" alt="" width="380" height="473" class="fm-face" decoding="async"></picture>
+            <span class="fm-who"><b>Rakesh Surampalli</b><em>Dallas, TX · now</em></span>
+          </li>
+          <li class="fm-muted">
+            <span class="fm-dot" aria-hidden="true"></span>
+            <span class="fm-who"><b>CVS Health</b><em>Work · 2023 – Present</em></span>
+          </li>
+          <li class="fm-muted">
+            <span class="fm-dot" aria-hidden="true"></span>
+            <span class="fm-who"><b>UT Dallas</b><em>MS Business Analytics</em></span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="fm-map">
+        <div class="map-art" aria-hidden="true">
+          <span class="road r1"></span><span class="road r2"></span><span class="road r3"></span>
+          <span class="road v1"></span><span class="road v2"></span>
+          <span class="park p1"></span><span class="park p2"></span>
+          <span class="water"></span>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span class="scroll-text">Scroll Down</span>
-        </div>
-    </section>
+        <div class="map-pin" aria-hidden="true"><span class="pulse"></span><span class="dot"></span></div>
+        <p class="map-label">Dallas, Texas</p>
 
-    <!-- Work Experience Section -->
-    <section id="work" class="work">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">Highlighted roles and impact</p>
+        <article class="fm-card">
+          <header class="fm-card-head">
+            <picture><source type="image/webp" srcset="img/hero-avatar-380.webp"><img src="img/hero-avatar.png" alt="Rakesh Surampalli" width="380" height="473" class="fm-avatar" decoding="async"></picture>
+            <div>
+              <h1>Rakesh Surampalli</h1>
+              <p class="fm-role">Full-Stack &amp; AI Engineer</p>
+              <p class="fm-loc"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg> Dallas, Texas — <span class="fm-live">You are here</span></p>
             </div>
-        </div>
-        <div class="work-stack" id="work-stack">
-            <article class="work-card">
-                <div class="work-header">
-                    <div class="work-meta"><span class="work-index">01</span></div>
-                    <h3 class="work-role">Full‑Stack Developer · CVS Health</h3>
-                    <div class="work-meta"><span class="work-period">2023 – Present</span></div>
-                </div>
-                <div class="work-body">
-                    <p class="work-desc">Developed integration-ready backend APIs and data pipelines on Azure, powering analytics workflows with containerized deployments and CI/CD automation.</p>
-                    <div class="work-sections">
-                        <div class="work-col">
-                            <h4 class="work-subtitle">  Key Achievements</h4>
-                            <ul class="work-list">
-                                <li class="work-pill">Implemented LLM-powered summarization and insight generation, exposing inference through versioned REST APIs.</li>
-                                <li class="work-pill">Built scalable ingestion + transformation pipelines using Azure SQL and Cosmos DB for analytics-ready datasets.</li>
-                                <li class="work-pill">Containerized services with Docker and deployed to Kubernetes for scalability, repeatable releases, and high availability.</li>
-                                <li class="work-pill">Automated build/test/deploy with GitHub Actions and Terraform to improve release consistency and reduce manual effort.</li>
-                                <li class="work-pill">Improved service reliability via API validation, integration testing, and root-cause debugging using logs and monitoring tools.</li>
-                            </ul>
-                        </div>
-                        <div class="work-col">
-                            <h4 class="work-subtitle">🧩 Tech Stack & Architecture</h4>
-                            <div class="work-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Django</span>
-                                <span class="tag">CosmosDB</span>
-                                <span class="tag">CI/CD</span>
-                                <span class="tag">Azure</span>
-                                <span class="tag">Docker</span>
-                                <span class="tag">Power BI</span>
-                                <span class="tag">AI/NLP Models</span>
-                                <span class="tag">GitHub Actions</span>
-                                <span class="tag">LangChain/OpenAI</span>
-                            </div>
-                            <h5 class="work-subheading">Architecture</h5>
-                            <ul class="work-list">
-                                <li>Frontend: React dashboards for operational analytics and internal workflows.</li>
-                                <li>Backend: Django REST microservices for orchestration, inference endpoints, and data services.</li>
-                                <li>Cloud: Azure Functions, Logic Apps, and CI/CD via GitHub Actions for distributed, fault-tolerant deployment.</li>
-                            </ul>
-                            <h5 class="work-subheading" style="margin-top:.75rem;">Performance</h5>
-                            <div class="work-metrics">
-                                <div class="metric"><span class="metric-value">98%</span><span class="metric-label">Model Accuracy</span></div>
-                                <div class="metric"><span class="metric-value">99.9%</span><span class="metric-label">API Uptime</span></div>
-                                <div class="metric"><span class="metric-value"><150ms</span><span class="metric-label">API Response Time</span></div>
-                                <div class="metric"><span class="metric-value">+40%</span><span class="metric-label">Data Pipeline Efficiency</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="work-card">
-                <div class="work-header">
-                    <div class="work-meta"><span class="work-index">02</span></div>
-                    <h3 class="work-role">Data Analytics Engineer · Copart</h3>
-                    <div class="work-meta"><span class="work-period">2022 – 2023</span></div>
-                </div>
-                <div class="work-body">
-                    <p class="work-desc">Optimized auction pricing and vehicle performance using Python and SQL, built Tableau dashboards, designed ETL pipelines, and led data migration from MariaDB to GCP for scalable analytics.</p>
-                    <div class="work-sections">
-                        <div class="work-col">
-                            <h4 class="work-subtitle">  Key Achievements</h4>
-                             <ul class="work-list">
-                                 <li class="work-pill">Optimized vehicle pricing and auction performance using Python- and SQL-based analytics.</li>
-                                 <li class="work-pill">Built interactive Tableau dashboards improving visibility for operations, finance, and yard teams.</li>
-                                 <li class="work-pill">Led successful data migration from on-prem MariaDB to Google Cloud Platform, boosting scalability.</li>
-                                 <li class="work-pill">Streamlined ETL pipelines and reporting workflows, enhancing data accuracy and decision-making speed.</li>
-                             </ul>
-                        </div>
-                        <div class="work-col">
-                            <h4 class="work-subtitle">🧩 Tech Stack & Architecture</h4>
-                            <div class="work-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">SQL</span>
-                                <span class="tag">ETL Pipelines</span>
-                                <span class="tag">GCP</span>
-                                <span class="tag">Tableau</span>
-                                <span class="tag">BigQuery</span>
-                                <span class="tag">Pandas</span>
-                                <span class="tag">Git</span>
-                                <span class="tag">Jira</span>
-                            </div>
-                            <h5 class="work-subheading">Architecture</h5>
-                            <ul class="work-list">
-                                <li>MariaDB migrated to Google Cloud Platform with BigQuery and Cloud Storage.</li>
-                                <li>Python ETL pipelines for data cleaning, transformation, and trend analysis.</li>
-                                <li>Tableau dashboards delivering real-time insights.</li>
-                            </ul>
-                            <h5 class="work-subheading" style="margin-top:.75rem;">Performance</h5>
-                            <div class="work-metrics">
-                                <div class="metric"><span class="metric-value">+25%</span><span class="metric-label">Pricing Accuracy</span></div>
-                                <div class="metric"><span class="metric-value">+40%</span><span class="metric-label">ETL Efficiency</span></div>
-                                <div class="metric"><span class="metric-value">99.8%</span><span class="metric-label">Data Reliability</span></div>
-                                <div class="metric"><span class="metric-value">2x</span><span class="metric-label">Dashboard Load Speed</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="work-card">
-                <div class="work-header">
-                    <div class="work-meta"><span class="work-index">03</span></div>
-                    <h3 class="work-role">Backend Developer Intern · Toyama Automation</h3>
-                    <div class="work-meta"><span class="work-period">2019 – 2021</span></div>
-                </div>
-                <div class="work-body">
-                    <p class="work-desc">Developed a Django-based IoT backend integrated with AWS and Alexa, built automation logic for smart devices, and deployed secure Dockerized microservices.</p>
-                    <div class="work-sections">
-                        <div class="work-col">
-                            <h4 class="work-subtitle">🚀 Key Achievements</h4>
-                             <ul class="work-list">
-                                 <li class="work-pill">Developed a Django-based backend integrating IoT sensors with AWS cloud services.</li>
-                                 <li class="work-pill">Developed voice-controlled automation with Alexa SDK and React web/mobile dashboards for device management.</li>
-                                 <li class="work-pill">Reduced API latency by 40% via Dockerized microservices and CI/CD deployment.</li>
-                                 <li class="work-pill">Implemented time-based automation logic and test-driven RESTful microservices.</li>
-                                 <li class="work-pill">Collaborated with firmware and frontend teams to standardize communication protocols and secure JSON payload structures.</li>
-                             </ul>
-                        </div>
-                        <div class="work-col">
-                            <h4 class="work-subtitle">🧩 Tech Stack & Architecture</h4>
-                            <div class="work-tags">
-                                <span class="tag">Django</span>
-                                <span class="tag">REST APIs</span>
-                                <span class="tag">Alexa Voice SDK</span>
-                                <span class="tag">AWS IOT Core</span>
-                                <span class="tag">DynamoDB</span>
-                                <span class="tag">Docker</span>
-                                <span class="tag">Postman</span>
-                            </div>
-                            <h5 class="work-subheading">Architecture</h5>
-                            <ul class="work-list">
-                                <li>IoT sensors and smart appliances communicating via MQTT/AWS IoT Core.</li>
-                                <li>Django backend handling automation logic, REST APIs, and Alexa integrations.</li>
-                                <li>AWS services (Lambda, DynamoDB) managing data, analytics, and real-time automation triggers.</li>
-                            </ul>
-                            <h5 class="work-subheading" style="margin-top:.75rem;">Performance</h5>
-                            <div class="work-metrics">
-                                <div class="metric"><span class="metric-value">-40%</span><span class="metric-label">API Latency</span></div>
-                                <div class="metric"><span class="metric-value">99.7%</span><span class="metric-label">System Uptime</span></div>
-                                <div class="metric"><span class="metric-value">+35%</span><span class="metric-label">Automation Accuracy</span></div>
-                                <div class="metric"><span class="metric-value">+50%</span><span class="metric-label">Deployment Speed</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
+          </header>
+          <p class="fm-bio">I build the unglamorous half of AI — the pipelines, the APIs, the uptime. At CVS Health I ship LLM-powered summarization services and the Azure data platforms that feed them. Six years across healthcare, auctions, and IoT.</p>
+          <p class="fm-actions">
+            <a class="pill pill-primary" href="mailto:rakeshsurampalli@gmail.com">Email</a>
+            <a class="pill" href="https://www.linkedin.com/in/rakeshsurampalli27/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="pill" href="https://github.com/rakeshsurampalli" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <button type="button" class="pill" data-open="preview">Résumé</button>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Education</h2>
-                <p class="section-subtitle">Degrees and certifications</p>
-            </div>
-            <div class="edu-timeline">
-                <div class="edu-item">
-                    <h3>Master of Science in Business Analytics</h3>
-                    <p class="edu-meta">University of Texas at Dallas · 2021 – 2023</p>
-                </div>
-                <div class="edu-item">
-                    <h3>Bachelor of Technology in Mechatronics Engineering</h3>
-                    <p class="edu-meta">Manipal Institute of Technology · 2016 – 2020</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ---------- Terminal ---------- -->
+  <section class="window win-terminal is-open" id="terminal" data-app="terminal" data-x="782" data-y="62" data-w="600" data-h="392"
+           role="dialog" aria-label="Terminal">
+    <header class="titlebar tb-dark">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Terminal"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Terminal"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Terminal"></button>
+      </div>
+      <p class="title">rakesh@portfolio — zsh — 80×24</p>
+    </header>
+    <div class="win-body term-body">
+      <div class="term-out" id="term-out">
+        <div class="tl"><span class="tp">rakesh@portfolio ~ %</span> <span class="tt">whoami</span></div>
+        <div class="tl"><span class="tt">Rakesh Surampalli — Full-Stack &amp; AI Engineer, Dallas TX</span></div>
+        <div class="tl"><span class="tt tdim">Type 'help' for commands. Try 'projects', 'experience', 'resume'.</span></div>
+      </div>
+      <label for="term-in" class="visually-hidden">Terminal command</label>
+      <div class="term-inline">
+        <span class="tp">rakesh@portfolio ~ %</span>
+        <input id="term-in" class="term-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false">
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <!-- About section removed as requested -->
+  <!-- ---------- Finder : Projects ---------- -->
+  <section class="window win-finder" id="finder" data-app="finder" data-x="196" data-y="118" data-w="880" data-h="580"
+           role="dialog" aria-label="Finder — Projects">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Finder"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Finder"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Finder"></button>
+      </div>
+      <p class="title">Projects</p>
+    </header>
+    <div class="win-body finder-body">
+      <aside class="fd-sidebar">
+        <p class="fd-head">Favourites</p>
+        <ul>
+          <li class="is-on"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-folder"/></svg> Projects</li>
+          <li data-open="notes" data-note="experience"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-folder"/></svg> Experience</li>
+          <li data-open="notes" data-note="skills"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-folder"/></svg> Skills</li>
+          <li data-open="preview"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg> Résumé.pdf</li>
+        </ul>
+      </aside>
+      <div class="fd-main">
+        <p class="fd-path">Macintosh HD › Users › rakesh › Projects</p>
+        <ul class="fd-grid">
+          <li class="fd-item">
+            <a href="https://fin-ai-fullstack.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <span class="fd-thumb fd-shot"><img src="img/thumb-finai.webp" alt="" width="480" height="300" loading="lazy" decoding="async"></span>
+              <b>FinAI</b>
+            </a>
+            <p>A board of five AI specialists for your portfolio. Link a brokerage, ask anything in one conversation, and get risk, concentration and S&amp;P&nbsp;500 comparison back.</p>
+            <p class="fd-tags"><span>Python</span><span>PostgreSQL</span><span>Azure</span><span>Docker</span></p>
+            <p class="fd-links">
+              <a href="https://fin-ai-fullstack.vercel.app/" target="_blank" rel="noopener noreferrer">Live <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
+              <a href="https://github.com/FinaiWorld/ABOUT" target="_blank" rel="noopener noreferrer">Code <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
+            </p>
+          </li>
+          <li class="fd-item">
+            <a href="https://tudu-mobile-phase-1.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <span class="fd-thumb fd-shot"><img src="img/thumb-tudu.webp" alt="" width="480" height="300" loading="lazy" decoding="async"></span>
+              <b>Tudu</b>
+            </a>
+            <p>A day planner that schedules around where you actually are &mdash; routines, shopping runs and location-aware suggestions in one place.</p>
+            <p class="fd-tags"><span>React Native</span><span>Python</span><span>Azure</span><span>PostgreSQL</span></p>
+            <p class="fd-links">
+              <a href="https://tudu-mobile-phase-1.vercel.app/" target="_blank" rel="noopener noreferrer">Live <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
+              <a href="https://github.com/TuduSmartPlanner/About" target="_blank" rel="noopener noreferrer">Code <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
+            </p>
+          </li>
+          <li class="fd-item">
+            <a href="https://atharva-agri.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <span class="fd-thumb fd-shot"><img src="img/thumb-atharva.webp" alt="" width="480" height="300" loading="lazy" decoding="async"></span>
+              <b>Atharva</b>
+            </a>
+            <p>An agri-marketplace that puts FPOs and farmers directly in front of buyer demand, with crop analytics and IoT soil data behind it.</p>
+            <p class="fd-tags"><span>JavaScript</span><span>Python</span><span>Firebase</span><span>IoT</span></p>
+            <p class="fd-links">
+              <a href="https://atharva-agri.vercel.app/" target="_blank" rel="noopener noreferrer">Live <svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
+            </p>
+          </li>
+        </ul>
+        <p class="fd-status">3 items · <a href="https://github.com/rakeshsurampalli?tab=repositories" target="_blank" rel="noopener noreferrer">More on GitHub ↗</a></p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience & Skills</h2>
-                <p class="section-subtitle">My technical expertise and professional journey</p>
-            </div>
-            <div class="experience-content">
-            <div class="skills-section">
-                <h3>Technical Skills</h3>
-                <!-- Floating icons overlay -->
-                <div class="skills-floaters" aria-hidden="true"></div>
-                <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Frontend</h4>
-                            <div class="skill-list">
-                                <div class="skill-item">
-                                    <i class="fab fa-react"></i>
-                                    <span>React</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-chart-bar"></i>
-                                    <span>Power BI</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fab fa-js-square"></i>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fab fa-html5"></i>
-                                    <span>HTML5</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-table"></i>
-                                    <span>Tableau</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fab fa-js-square"></i>
-                                    <span>JavaScript</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Backend</h4>
-                            <div class="skill-list">
-                                <div class="skill-item">
-                                    <i class="fab fa-node-js"></i>
-                                    <span>Node.js</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fab fa-python"></i>
-                                    <span>Python</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-leaf"></i>
-                                    <span>Django</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-database"></i>
-                                    <span>MongoDB</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-database"></i>
-                                    <span>PostgreSQL</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-server"></i>
-                                    <span>Microservices</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Cloud, AI & Tools</h4>
-                            <div class="skill-list">
-                                <div class="skill-item">
-                                    <i class="fab fa-git-alt"></i>
-                                    <span>Git</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fab fa-docker"></i>
-                                    <span>Docker</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fab fa-aws"></i>
-                                    <span>AWS</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fab fa-microsoft"></i>
-                                    <span>Azure</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-brain"></i>
-                                    <span>AI / NLP</span>
-                                </div>
-                                <div class="skill-item">
-                                    <i class="fas fa-terminal"></i>
-                                    <span>VS Code / Terminal</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ---------- Notes : Experience / Skills / Education ---------- -->
+  <section class="window win-notes" id="notes" data-app="notes" data-x="240" data-y="100" data-w="900" data-h="600"
+           role="dialog" aria-label="Notes — Experience, Skills and Education">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Notes"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Notes"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Notes"></button>
+      </div>
+      <p class="title">Notes</p>
+    </header>
+    <div class="win-body notes-body">
+      <aside class="nt-list">
+        <p class="nt-head">Notes</p>
+        <ul id="nt-tabs">
+          <li class="is-on" data-note="experience"><b>Experience</b><em>Three roles, one thread…</em></li>
+          <li data-note="skills"><b>Skills</b><em>Grouped by what they do…</em></li>
+          <li data-note="education"><b>Education</b><em>UT Dallas &middot; Manipal&hellip;</em></li>
+        </ul>
+        <p class="nt-head nt-head--sub">Case studies</p>
+        <ul id="nt-tabs-cs">
+          <li data-note="cs-finai"><b>FinAI</b><em>AI portfolio analysis</em></li>
+          <li data-note="cs-tudu"><b>Tudu</b><em>Location-aware planner</em></li>
+          <li data-note="cs-atharva"><b>Atharva</b><em>Agri-marketplace</em></li>
+        </ul>
+      </aside>
+      <div class="nt-page">
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A showcase of my recent work and achievements</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <div class="project-number">01</div>
-                        <div class="project-links">
-                            <a href="https://fin-ai-fullstack.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" title="View Live">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/FinaiWorld/ABOUT" target="_blank" rel="noopener noreferrer" class="project-link" title="View Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="finai_nobg.png" alt="FinAI - AI Financial Analytics Platform" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <h3>FinAI</h3>
-                        <p>AI-powered financial analytics platform that helps investors track portfolio trends, detect underperforming stocks, and receive smart, data-driven investment recommendations based on performance, risk, and market insights</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>PostgreSQL</span>
-                            <span>Azure AppServices</span>
-                            <span>Docker</span>
-                            <span>APIs</span>
-                        </div>
-                    </div>
-                </div>
+        <article class="note is-on" data-note="experience">
+          <h2>Experience</h2>
+          <p class="nt-date">Updated today</p>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-number">02</div>
-                        <div class="project-links">
-                            <a href="https://tudu-mobile-phase-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" title="View Live">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/TuduSmartPlanner/About" target="_blank" rel="noopener noreferrer" class="project-link" title="View Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="tudu_logo.png" alt="TUDU - Smart Planner App" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <h3>TUDU - Smart Planner App</h3>
-                        <p>AI-powered smart task planner that organizes your daily activities, shopping, and travel by analyzing notes, suggesting optimal times and locations, and integrating maps and price comparisons.</p>
-                        <div class="project-tech">
-                            <span>React js/native</span>
-                            <span>Python</span>
-                            <span>AI/ML</span> 
-                            <span>Azure AppServices</span>
-                            <span>PostgreSQL</span>
-                            <span>Docker</span>
-                            <span>APIs</span>
-                        </div>
-                    </div>
-                </div>
+          <section class="job">
+            <h3>Full-Stack Developer <span>· CVS Health</span></h3>
+            <p class="job-when">2023 — Present</p>
+            <ul>
+              <li>LLM-powered summarization and insight generation, exposed through versioned REST APIs.</li>
+              <li>Scalable ingestion and transformation pipelines on Azure SQL and Cosmos DB.</li>
+              <li>Containerized with Docker, deployed to Kubernetes, shipped via GitHub Actions and Terraform.</li>
+            </ul>
+            <p class="job-metrics"><span><b>98%</b>model accuracy</span><span><b>99.9%</b>API uptime</span><span><b>&lt;150ms</b>response</span><span><b>+40%</b>pipeline efficiency</span></p>
+          </section>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-number">03</div>
-                        <div class="project-links">
-                            <a href="https://bhuchakra.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" title="View Live">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="#" class="project-link" title="View Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="Bhuchakra_logo.png" alt="Bhuchakra - AI and IoT Agri-Commerce Platform" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <h3>Bhuchakra</h3>
-                        <p>AI- and IoT-powered agri-commerce platform connecting farmers, buyers, and logistics through smart farming, crop analytics, and direct market access for sustainable rural growth.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>Python</span>
-                            <span>AI/ML</span> 
-                            <span>Firebase</span>
-                            <span>Android/IOS</span>
-                        </div>
-                    </div>
-                </div>
+          <section class="job">
+            <h3>Data Analytics Engineer <span>· Copart</span></h3>
+            <p class="job-when">2022 — 2023</p>
+            <ul>
+              <li>Optimized vehicle pricing analytics with Python and SQL, sharpening valuation accuracy.</li>
+              <li>Designed Tableau dashboards used by operations and pricing teams.</li>
+              <li>Led the MariaDB-to-GCP migration, improving scalability and reporting throughput.</li>
+            </ul>
+            <p class="job-metrics"><span><b>+25%</b>pricing accuracy</span><span><b>+40%</b>ETL efficiency</span><span><b>99.8%</b>data reliability</span><span><b>2×</b>dashboard speed</span></p>
+          </section>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-number">04</div>
-                        <div class="project-links">
-                            <a href="https://projectmanas.in/" target="_blank" rel="noopener noreferrer" class="project-link" title="View Live">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="#" class="project-link" title="View Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="manas_logo.png" alt="Manas - Blog Platform" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Manas</h3>
-                        <p>Student-run research team from MIT Manipal dedicated to advancing autonomous technologies and artificial intelligence applications.</p>
-                        <div class="project-tech">
-                            <span>Autonomous Systems</span>
-                            <span>AI/ML</span>  
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projects-footer">
-                <a href="#" class="btn btn-outline">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+          <section class="job">
+            <h3>Backend Developer Intern <span>· Toyama Automation</span></h3>
+            <p class="job-when">2019 — 2021</p>
+            <ul>
+              <li>Django IoT backend wired to AWS IoT Core and the Alexa Skills Kit.</li>
+              <li>Cut API latency with Dockerized microservices and time-based automation logic.</li>
+              <li>Modelled device state and telemetry in DynamoDB for low-latency reads.</li>
+            </ul>
+            <p class="job-metrics"><span><b>−40%</b>API latency</span><span><b>99.7%</b>uptime</span><span><b>+35%</b>automation accuracy</span><span><b>+50%</b>deploy speed</span></p>
+          </section>
+        </article>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>I'm always interested in hearing about new opportunities and exciting projects.</p>
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <i class="fas fa-envelope"></i>
-                            <span>rakeshsurampalli@gmail.com</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (469)927-3770</span>
-                            <span>+91 9652529111</span>
-                        </div>
-                        <div class="contact-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Dallas, TX, USA</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/rakeshsurampalli27/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/rakeshsurampalli" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form" action="https://formspree.io/f/mdkpdejv" method="POST">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="_subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <!-- Hidden field for spam protection -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <!-- Redirect after form submission -->
-                    <input type="hidden" name="_next" value="thanks.html">
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+        <article class="note" data-note="skills">
+          <h2>Skills</h2>
+          <p class="nt-date">Grouped by what they do, not where they run</p>
+          <div class="sk-group">
+            <h3>Languages &amp; Frameworks</h3>
+            <p class="chips"><span class="hot">Python</span><span>JavaScript</span><span class="hot">React</span><span class="hot">Django</span><span>Node.js</span><span>SQL</span><span>HTML5 / CSS3</span></p>
+          </div>
+          <div class="sk-group">
+            <h3>Data &amp; AI</h3>
+            <p class="chips"><span class="hot">LangChain</span><span class="hot">OpenAI APIs</span><span>NLP</span><span>Pandas</span><span>scikit-learn</span><span>PostgreSQL</span><span>Cosmos DB</span><span>MongoDB</span></p>
+          </div>
+          <div class="sk-group">
+            <h3>Cloud &amp; Platform</h3>
+            <p class="chips"><span class="hot">Azure</span><span>AWS</span><span class="hot">Docker</span><span>Kubernetes</span><span>Terraform</span><span>GitHub Actions</span><span>Microservices</span><span>Git</span></p>
+          </div>
+          <div class="sk-group">
+            <h3>Analytics</h3>
+            <p class="chips"><span>Power BI</span><span>Tableau</span><span>BigQuery</span></p>
+          </div>
+        </article>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Rakesh Surampalli. All rights reserved.</p>
-        </div>
-    </footer>
+        <article class="note" data-note="education">
+          <h2>Education</h2>
+          <p class="nt-date">2016 — 2023</p>
+          <section class="job">
+            <h3>Master of Science, Business Analytics</h3>
+            <p class="job-when">University of Texas at Dallas · 2021 — 2023</p>
+          </section>
+          <section class="job">
+            <h3>Bachelor of Technology, Mechatronics Engineering</h3>
+            <p class="job-when">Manipal Institute of Technology · 2016 — 2020</p>
+          </section>
+          <section class="job">
+            <h3>Project Manas</h3>
+            <p class="job-when">MIT Manipal's autonomous-vehicle research team</p>
+            <ul><li>Student-run team building autonomous ground vehicles. <a href="https://projectmanas.in/" target="_blank" rel="noopener noreferrer">projectmanas.in ↗</a></li></ul>
+          </section>
+        </article>
 
-    <!-- Terminal Backdrop -->
-    <div id="terminal-backdrop" class="terminal-backdrop"></div>
 
-    <!-- Developer Terminal -->
-    <div id="dev-terminal" class="dev-terminal">
-        <div class="terminal-header">
-            <div class="terminal-controls">
-                <button class="terminal-btn close" id="terminal-close"></button>
-            </div>
-            <div class="terminal-title">rakesh@portfolio:~</div>
-        </div>
-        <div class="terminal-body">
-            <div class="terminal-content" id="terminal-content">
-                <div class="terminal-line">
-                    <span class="terminal-prompt">rakesh@portfolio:~$</span>
-                    <span class="terminal-text">Welcome to Rakesh Surampalli's interactive portfolio!</span>
-                </div>
-                <div class="terminal-line">
-                    <span class="terminal-prompt">rakesh@portfolio:~$</span>
-                    <span class="terminal-text">Type 'help' to see available commands.</span>
-                </div>
-                <div class="terminal-line">
-                    <span class="terminal-text">System initialized successfully.</span>
-                </div>
-                <div class="terminal-line">
-                    <span class="terminal-text">Type 'help' to see available commands.</span>
-                </div>
-            </div>
-            <div class="terminal-input-line">
-                <span class="terminal-prompt">rakesh@portfolio:~$</span>
-                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false">
-            </div>
-        </div>
+        <article class="note" data-note="cs-finai">
+          <h2>FinAI</h2>
+          <p class="nt-date">AI portfolio analysis &middot; <a href="https://fin-ai-fullstack.vercel.app/" target="_blank" rel="noopener noreferrer">fin-ai-fullstack.vercel.app &#8599;</a></p>
+          <section class="job">
+            <h3>The problem</h3>
+            <ul><li>Retail investors can see <em>what</em> they hold, but not what it means. Concentration risk, drift against a benchmark, and quietly underperforming positions all stay invisible until they hurt.</li></ul>
+          </section>
+          <section class="job">
+            <h3>What I built</h3>
+            <ul>
+              <li>A conversational analyst: five specialist agents share one thread, so a question about risk, performance, or a single holding lands with whichever specialist should answer it.</li>
+              <li>Brokerage linking, so analysis runs on real holdings rather than a manually typed watchlist.</li>
+              <li>Automatic surfacing of risk, concentration and opportunities, benchmarked against the S&amp;P&nbsp;500.</li>
+            </ul>
+          </section>
+          <section class="job">
+            <h3>How it is put together</h3>
+            <ul>
+              <li>Python services behind versioned REST endpoints, containerized with Docker and hosted on Azure App Services.</li>
+              <li>PostgreSQL for holdings, positions and computed analytics.</li>
+              <li>Market data pulled on a schedule and cached, so the conversational layer reads from a warm store instead of hitting the provider per question.</li>
+            </ul>
+            <p class="chips"><span class="hot">Python</span><span>PostgreSQL</span><span class="hot">Azure</span><span>Docker</span><span>LLM agents</span><span>Market data APIs</span></p>
+          </section>
+          <section class="job">
+            <h3>Outcome</h3>
+            <ul><li class="nt-todo">Add the numbers only you have &mdash; users, holdings analysed, latency, anything you measured. A specific figure here is worth more than a paragraph.</li></ul>
+          </section>
+        </article>
+
+        <article class="note" data-note="cs-tudu">
+          <h2>Tudu</h2>
+          <p class="nt-date">Location-aware day planner &middot; <a href="https://tudu-mobile-phase-1.vercel.app/" target="_blank" rel="noopener noreferrer">tudu-mobile-phase-1.vercel.app &#8599;</a></p>
+          <section class="job">
+            <h3>The problem</h3>
+            <ul><li>To-do apps hold a list but ignore geography. Errands get scheduled in an order that has you crossing the city twice, and the app never notices.</li></ul>
+          </section>
+          <section class="job">
+            <h3>What I built</h3>
+            <ul>
+              <li>A planner that reads your tasks and orders the day around where you actually are, not just when things are due.</li>
+              <li>Shopping runs grouped by location, with price comparison so a trip is worth making.</li>
+              <li>Routines and recurring plans, so the schedule reshapes itself rather than being rebuilt each week.</li>
+            </ul>
+          </section>
+          <section class="job">
+            <h3>How it is put together</h3>
+            <ul>
+              <li>React Native client sharing components with the web build.</li>
+              <li>Python backend for task parsing and scheduling, on Azure with PostgreSQL.</li>
+              <li>Maps and place data for the location layer; suggestions are generated server-side so the phone stays cheap to run.</li>
+            </ul>
+            <p class="chips"><span class="hot">React Native</span><span class="hot">Python</span><span>Azure</span><span>PostgreSQL</span><span>Docker</span><span>Maps APIs</span></p>
+          </section>
+          <section class="job">
+            <h3>Outcome</h3>
+            <ul><li class="nt-todo">Fill in what you measured &mdash; retention, tasks planned, time saved per trip.</li></ul>
+          </section>
+        </article>
+
+        <article class="note" data-note="cs-atharva">
+          <h2>Atharva</h2>
+          <p class="nt-date">Sustainable agritech &middot; <a href="https://atharva-agri.vercel.app/" target="_blank" rel="noopener noreferrer">atharva-agri.vercel.app &#8599;</a></p>
+          <section class="job">
+            <h3>The problem</h3>
+            <ul><li>Between a farmer and a buyer sit several intermediaries. Each one takes margin and adds latency, and the farmer &mdash; who carries all the growing risk &mdash; keeps the least of the price.</li></ul>
+          </section>
+          <section class="job">
+            <h3>What I built</h3>
+            <ul>
+              <li>A marketplace putting FPOs and individual farmers directly in front of buyer demand.</li>
+              <li>Crop analytics and IoT soil sensing feeding recommendations on what to plant and when to sell.</li>
+              <li>Weather alerts and irrigation signals, so the advice is operational rather than only commercial.</li>
+            </ul>
+          </section>
+          <section class="job">
+            <h3>How it is put together</h3>
+            <ul>
+              <li>JavaScript front end with a Python analytics service behind it.</li>
+              <li>Firebase for auth, realtime listings and device telemetry &mdash; chosen because rural connectivity is intermittent and the offline story mattered more than query flexibility.</li>
+              <li>Mobile-first throughout: most users arrive on a phone, on a slow connection.</li>
+            </ul>
+            <p class="chips"><span class="hot">JavaScript</span><span class="hot">Python</span><span>Firebase</span><span>IoT sensors</span><span>Android / iOS</span></p>
+          </section>
+          <section class="job">
+            <h3>Outcome</h3>
+            <ul><li class="nt-todo">Add real figures &mdash; farmers onboarded, FPOs, volume traded, margin returned to growers.</li></ul>
+          </section>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Preview : Résumé ---------- -->
+  <section class="window win-preview" id="preview" data-app="preview" data-x="330" data-y="80" data-w="760" data-h="640"
+           role="dialog" aria-label="Preview — Résumé">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Preview"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Preview"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Preview"></button>
+      </div>
+      <p class="title">Rakesh_CV.pdf</p>
+      <a class="tb-action" href="Rakesh_CV.pdf" download>Download</a>
+    </header>
+    <div class="win-body preview-body">
+      <iframe id="cv-frame" title="Résumé PDF"></iframe>
+    </div>
+  </section>
+
+
+  <!-- ---------- Safari ---------- -->
+  <section class="window win-safari" id="safari" data-app="safari" data-x="250" data-y="90" data-w="960" data-h="640"
+           role="dialog" aria-label="Safari">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Safari"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Safari"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Safari"></button>
+      </div>
+      <p class="title" id="sf-title">Safari</p>
+    </header>
+
+    <div class="sf-toolbar">
+      <div class="sf-nav">
+        <button type="button" id="sf-back" aria-label="Back">&#8249;</button>
+        <button type="button" id="sf-fwd"  aria-label="Forward">&#8250;</button>
+      </div>
+      <p class="sf-addr"><span class="sf-lock" aria-hidden="true">&#9679;</span><span id="sf-url">fin-ai-fullstack.vercel.app</span></p>
+      <a class="tb-action" id="sf-open" href="https://fin-ai-fullstack.vercel.app/" target="_blank" rel="noopener noreferrer">Open&nbsp;&#8599;</a>
     </div>
 
-    <!-- Resume Viewer Modal -->
-    <div id="resume-backdrop" class="resume-backdrop">
-        <div id="resume-viewer" class="resume-viewer">
-            <div class="resume-header">
-                <div class="resume-controls">
-                    <button class="resume-btn close" id="resume-close"></button>
-                </div>
-                <h3 class="resume-title">Rakesh Surampalli - Resume</h3>
-                <div class="resume-actions">
-                    <button id="resume-download" class="btn-resume-download" title="Download Resume">
-                        <i class="fas fa-download"></i>
-                        <span>Download</span>
-                    </button>
-                </div>
-            </div>
-            <div class="resume-body">
-                <div class="resume-content" id="resume-content">
-                    <iframe id="resume-frame" src="./Rakesh_CV.pdf" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
+    <div class="sf-tabs" id="sf-tabs" role="tablist">
+      <button type="button" role="tab" class="is-on" data-url="https://fin-ai-fullstack.vercel.app/" data-name="FinAI">FinAI</button>
+      <button type="button" role="tab" data-url="https://tudu-mobile-phase-1.vercel.app/" data-name="Tudu">Tudu</button>
+      <button type="button" role="tab" data-url="https://atharva-agri.vercel.app/" data-name="Atharva">Atharva</button>
+      <button type="button" role="tab" data-url="https://projectmanas.in/" data-name="Project Manas">Project Manas</button>
+      <button type="button" role="tab" data-url="https://github.com/rakeshsurampalli" data-name="GitHub" data-noframe="1">GitHub</button>
+      <button type="button" role="tab" data-url="https://www.linkedin.com/in/rakeshsurampalli27/" data-name="LinkedIn" data-noframe="1">LinkedIn</button>
     </div>
 
-    <script src="script.js"></script>
+    <div class="win-body sf-body">
+      <iframe id="sf-frame" title="Site preview" referrerpolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+      <div class="sf-blocked" id="sf-blocked" hidden>
+        <h3 id="sf-blocked-host">github.com</h3>
+        <p>This site refuses to be displayed in a frame.</p>
+        <p class="sf-hint">It sends <code>X-Frame-Options: deny</code>, and every browser honours that.</p>
+        <a class="pill pill-primary" id="sf-blocked-open" href="#" target="_blank" rel="noopener noreferrer">Open in a new tab &#8599;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Mail ---------- -->
+  <section class="window win-mail" id="mail" data-app="mail" data-x="360" data-y="130" data-w="640" data-h="520"
+           role="dialog" aria-label="Mail, new message">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Mail"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Mail"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Mail"></button>
+      </div>
+      <p class="title">New Message</p>
+    </header>
+    <div class="win-body mail-body">
+      <form class="mail-form" id="mail-form" action="https://formspree.io/f/mdkpdejv" method="POST">
+        <div class="mail-row">
+          <span class="mail-lab">To:</span>
+          <output>Rakesh Surampalli &lt;rakeshsurampalli@gmail.com&gt;</output>
+        </div>
+        <div class="mail-row">
+          <label class="mail-lab" for="mail-from">From:</label>
+          <input type="email" id="mail-from" name="email" autocomplete="email" placeholder="you@company.com" required>
+        </div>
+        <div class="mail-row">
+          <label class="mail-lab" for="mail-subject">Subject:</label>
+          <input type="text" id="mail-subject" name="_subject" placeholder="A role you might like" required>
+        </div>
+        <label for="mail-body" class="visually-hidden">Message</label>
+        <textarea id="mail-body" name="message" placeholder="Hi Rakesh &mdash;" required></textarea>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="visually-hidden">
+        <footer class="mail-foot">
+          <p id="mail-status" class="mail-status" role="status" aria-live="polite"></p>
+          <button type="submit" class="pill pill-primary" id="mail-send">Send</button>
+        </footer>
+      </form>
+    </div>
+  </section>
+
+  <!-- ---------- Photos ---------- -->
+  <section class="window win-photos" id="photos" data-app="photos" data-x="290" data-y="110" data-w="900" data-h="600"
+           role="dialog" aria-label="Photos, project screenshots">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close Photos"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize Photos"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom Photos"></button>
+      </div>
+      <p class="title">Screenshots</p>
+    </header>
+    <div class="win-body photos-body">
+      <div class="ph-grid" id="ph-grid">
+        <figure><button type="button" data-full="img/shot-finai.webp" data-cap="FinAI &mdash; a board of five AI specialists for your portfolio">
+          <img src="img/thumb-finai.webp" alt="FinAI landing page" width="480" height="300" loading="lazy" decoding="async"></button>
+          <figcaption>FinAI</figcaption></figure>
+        <figure><button type="button" data-full="img/shot-tudu.webp" data-cap="Tudu &mdash; your smart day planner">
+          <img src="img/thumb-tudu.webp" alt="Tudu landing page" width="480" height="300" loading="lazy" decoding="async"></button>
+          <figcaption>Tudu</figcaption></figure>
+        <figure><button type="button" data-full="img/shot-atharva.webp" data-cap="Atharva &mdash; sustainable agritech marketplace">
+          <img src="img/thumb-atharva.webp" alt="Atharva landing page" width="480" height="300" loading="lazy" decoding="async"></button>
+          <figcaption>Atharva</figcaption></figure>
+        <figure><button type="button" data-full="img/shot-manas.webp" data-cap="Project Manas &mdash; MIT Manipal autonomous vehicle team">
+          <img src="img/thumb-manas.webp" alt="Project Manas site" width="480" height="300" loading="lazy" decoding="async"></button>
+          <figcaption>Project Manas</figcaption></figure>
+      </div>
+      <div class="ph-viewer" id="ph-viewer" hidden>
+        <button type="button" class="ph-close" id="ph-close" aria-label="Back to grid">&#10005;</button>
+        <img id="ph-full" src="" alt="">
+        <p id="ph-cap"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- About This Engineer ---------- -->
+  <section class="window win-about" id="about" data-app="about" data-x="470" data-y="150" data-w="520" data-h="470"
+           role="dialog" aria-label="About This Engineer">
+    <header class="titlebar">
+      <div class="lights">
+        <button type="button" class="light red"    data-act="close"    aria-label="Close"></button>
+        <button type="button" class="light yellow" data-act="minimize" aria-label="Minimize"></button>
+        <button type="button" class="light green"  data-act="zoom"     aria-label="Zoom"></button>
+      </div>
+      <p class="title">About This Engineer</p>
+    </header>
+    <div class="win-body about-body">
+      <picture><source type="image/webp" srcset="img/hero-avatar-380.webp">
+        <img src="img/hero-avatar.png" alt="" width="380" height="473" class="ab-face" decoding="async"></picture>
+      <h2 class="ab-name">Rakesh Surampalli</h2>
+      <p class="ab-ver">Full-Stack &amp; AI Engineer</p>
+      <dl class="ab-spec">
+        <div><dt>Role</dt><dd>Full-Stack Developer, CVS Health</dd></div>
+        <div><dt>Experience</dt><dd>6+ years</dd></div>
+        <div><dt>Processor</dt><dd>Python &middot; Django &middot; React</dd></div>
+        <div><dt>Memory</dt><dd>Azure &middot; Docker &middot; Kubernetes &middot; LangChain</dd></div>
+        <div><dt>Storage</dt><dd>PostgreSQL &middot; Cosmos DB &middot; MongoDB</dd></div>
+        <div><dt>Location</dt><dd>Dallas, Texas</dd></div>
+        <div><dt>Status</dt><dd><span class="ab-ok">Open to opportunities</span></dd></div>
+      </dl>
+      <p class="ab-actions">
+        <button type="button" class="pill pill-primary" data-open="mail">Get in touch</button>
+        <button type="button" class="pill" data-open="preview">R&eacute;sum&eacute;</button>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ===== Menu bar dropdowns ===== -->
+<div class="menu-pop" id="pop-mark" hidden role="menu" aria-label="Main menu">
+  <button type="button" role="menuitem" data-open="about">About This Engineer</button>
+  <hr>
+  <button type="button" role="menuitem" data-open="preview">R&eacute;sum&eacute;&hellip;</button>
+  <button type="button" role="menuitem" data-open="mail">Send Message&hellip;</button>
+  <button type="button" role="menuitem" data-open="safari">Open Safari&hellip;</button>
+  <hr>
+  <button type="button" role="menuitem" id="pop-spotlight">Spotlight Search<kbd>&#8984;K</kbd></button>
+</div>
+
+<div class="menu-pop" id="pop-window" hidden role="menu" aria-label="Window menu">
+  <p class="pop-head">Open windows</p>
+  <div id="pop-window-list"></div>
+  <hr>
+  <button type="button" role="menuitem" id="pop-close-all">Close All Windows</button>
+</div>
+
+<!-- ===== Spotlight ===== -->
+<div class="spotlight" id="spotlight" hidden>
+  <div class="sl-panel" role="dialog" aria-modal="true" aria-label="Spotlight Search">
+    <div class="sl-top">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+      <input type="text" id="sl-input" placeholder="Spotlight Search" autocomplete="off"
+             spellcheck="false" role="combobox" aria-expanded="true" aria-controls="sl-results" aria-autocomplete="list">
+      <kbd class="sl-esc">esc</kbd>
+    </div>
+    <ul class="sl-results" id="sl-results" role="listbox" aria-label="Results"></ul>
+  </div>
+</div>
+
+<!-- ===== Dock ===== -->
+<nav class="dock" id="dock" aria-label="Dock">
+  <ul>
+    <li><button type="button" class="dock-app" data-open="finder"   aria-label="Finder — Projects"><svg aria-hidden="true" focusable="false"><use href="#app-finder"/></svg><span class="tip">Projects</span></button></li>
+    <li><button type="button" class="dock-app" data-open="findmy"   aria-label="Find My — About"><svg aria-hidden="true" focusable="false"><use href="#app-findmy"/></svg><span class="tip">About</span></button></li>
+    <li><button type="button" class="dock-app" data-open="notes"    aria-label="Notes — Experience and Skills"><svg aria-hidden="true" focusable="false"><use href="#app-notes"/></svg><span class="tip">Experience</span></button></li>
+    <li><button type="button" class="dock-app" data-open="terminal" aria-label="Terminal"><svg aria-hidden="true" focusable="false"><use href="#app-terminal"/></svg><span class="tip">Terminal</span></button></li>
+    <li><button type="button" class="dock-app" data-open="preview"  aria-label="Preview — Résumé"><svg aria-hidden="true" focusable="false"><use href="#app-preview"/></svg><span class="tip">Résumé</span></button></li>
+    <li><button type="button" class="dock-app" data-open="photos"   aria-label="Photos — screenshots"><svg aria-hidden="true" focusable="false"><use href="#app-photos"/></svg><span class="tip">Screenshots</span></button></li>
+    <li><button type="button" class="dock-app" data-open="safari"   aria-label="Safari — live project previews"><svg aria-hidden="true" focusable="false"><use href="#app-safari"/></svg><span class="tip">Safari</span></button></li>
+    <li class="dock-sep" aria-hidden="true"></li>
+    <li><button type="button" class="dock-app" data-open="mail" aria-label="Mail — write to Rakesh"><svg aria-hidden="true" focusable="false"><use href="#app-mail"/></svg><span class="tip">Mail</span></button></li>
+    <li class="dock-social"><a class="dock-app" href="https://github.com/rakeshsurampalli" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg aria-hidden="true" focusable="false"><use href="#app-github"/></svg><span class="tip">GitHub</span></a></li>
+    <li class="dock-social"><a class="dock-app" href="https://www.linkedin.com/in/rakeshsurampalli27/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#app-linkedin"/></svg><span class="tip">LinkedIn</span></a></li>
+  </ul>
+</nav>
+
 </body>
 </html>
