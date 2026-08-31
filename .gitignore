@@ -19,3 +19,6 @@ __pycache__/
 # Local build scratch
 _source/
 *.log
+
+# Source photo kept locally for re-cropping; derived avatars live in img/
+WhatsApp Image*

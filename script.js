@@ -712,6 +712,7 @@ function initPhotos() {
     b.addEventListener('click', () => {
       full.src = b.dataset.full;
       full.alt = b.dataset.cap || '';
+      full.hidden = false;
       cap.textContent = b.dataset.cap || '';
       viewer.hidden = false;
     });
