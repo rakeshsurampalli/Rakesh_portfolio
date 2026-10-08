@@ -2,7 +2,7 @@
 
 My portfolio, built as a macOS desktop. **[rakeshsurampalli.github.io/Rakesh_portfolio](https://rakeshsurampalli.github.io/Rakesh_portfolio/)**
 
-It opens with a macOS-setup style **"hello"** that writes itself on, then hands off to the desktop.
+It opens with a macOS-setup style greeting sequence — **hello → bonjour → welcome** — each written on in script, then hands off to the desktop.
 
 One screen, no scrolling. The profile lives in a Find My window; everything else is behind apps in the dock. Windows drag, resize, minimise and zoom. **⌘K** opens Spotlight.
 
@@ -95,11 +95,12 @@ against real rendered pixels, not just the token values.
 
 ### Boot screen
 
-`#boot` covers the viewport, writes "hello" in Pacifico, then fades out. The reveal is a soft-edged
+`#boot` covers the viewport and writes each greeting in Pacifico in turn, then fades out. The reveal is a soft-edged
 `mask-image` slid across the word (`@keyframes boot-write`) rather than a stroke animation — a font
 glyph is a filled outline, so stroke-drawing it would trace the outline instead of the pen stroke.
 
-- Total ~2.45s, then a 0.64s fade. Tune with `BOOT_HOLD` in `script.js`.
+- Greetings live in `GREETINGS` in `script.js`. **Keep them Latin** — Pacifico has no Devanagari or CJK glyphs, so a non-Latin greeting renders as tofu.
+- ~820ms write + 210ms hold + 260ms fade per word; the last one fades with the whole overlay. ~4.4s total. Tune via `WRITE_MS` / `HOLD_MS` / `LEAVE_MS`.
 - Click anywhere, press any key, or hit **Skip** to dismiss early.
 - The dismissing keypress is captured and `stopPropagation`'d so it does not also fire a desktop shortcut.
 - Under `prefers-reduced-motion` the wipe is dropped and it shows for ~0.9s.

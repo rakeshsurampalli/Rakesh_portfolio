@@ -930,18 +930,28 @@ let spotlightIsOpen = () => false;
 /* ------------------------------------------------------------
    Boot screen
    ------------------------------------------------------------ */
-const BOOT_HOLD = 2450;   // write (260 + 1750) then a short beat before dismissing
+// Greetings cycle the way the macOS setup screen does. Pacifico only covers
+// Latin, so these stay Latin — a Devanagari or CJK greeting would render as tofu.
+const GREETINGS = ['hello', 'bonjour', 'welcome'];
+const WRITE_MS = 820;   // mask sweep
+const HOLD_MS  = 210;   // beat after the word lands
+const LEAVE_MS = 260;   // fade before the next one
 
 function initBoot(onDone) {
   const boot = document.getElementById('boot');
-  if (!boot) { onDone(); return; }
+  const word = document.getElementById('boot-text');
+  if (!boot || !word) { onDone(); return; }
 
   let finished = false;
+  const timers = [];
+  const later = (fn, ms) => { timers.push(setTimeout(fn, ms)); };
+
   const finish = () => {
     if (finished) return;
     finished = true;
-    boot.classList.add('is-done');
+    timers.forEach(clearTimeout);
     document.removeEventListener('keydown', onKey, true);
+    boot.classList.add('is-done');
     // Leave it in the DOM until the fade completes, then take it out of the
     // layer tree entirely so its gradients stop compositing.
     setTimeout(() => { boot.style.display = 'none'; onDone(); }, 640);
@@ -950,11 +960,37 @@ function initBoot(onDone) {
   // Capture phase + stopPropagation so the key that dismisses the boot screen
   // does not also fire the desktop shortcuts underneath it.
   const onKey = (e) => { e.stopPropagation(); finish(); };
-
   boot.addEventListener('click', finish);
   document.addEventListener('keydown', onKey, true);
 
-  setTimeout(finish, reduceMotion() ? 900 : BOOT_HOLD);
+  if (reduceMotion()) {
+    word.textContent = GREETINGS[0];
+    word.classList.add('is-writing');
+    later(finish, 900);
+    return;
+  }
+
+  const show = (i) => {
+    if (finished) return;
+    word.textContent = GREETINGS[i];
+    word.classList.remove('is-writing', 'is-leaving');
+    void word.offsetWidth;              // reflow, so the animation restarts
+    word.classList.add('is-writing');
+
+    const last = i === GREETINGS.length - 1;
+    if (last) {
+      // Let the final greeting fade out with the whole overlay rather than on
+      // its own — the desktop appears behind it in one motion.
+      later(finish, WRITE_MS + HOLD_MS + 180);
+      return;
+    }
+    later(() => {
+      word.classList.add('is-leaving');
+      later(() => show(i + 1), LEAVE_MS);
+    }, WRITE_MS + HOLD_MS);
+  };
+
+  show(0);
 }
 
 /* ------------------------------------------------------------

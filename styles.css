@@ -153,16 +153,27 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   user-select: none;
 }
 
-/* The word is revealed by sliding a soft-edged mask across it, angled to
-   follow the slant of the script, so it reads as being written. */
+/* Each greeting is revealed by sliding a soft-edged mask across it, angled to
+   follow the slant of the script, so it reads as being written. script.js
+   restarts the animation per word by toggling .is-writing. */
 .boot-word > span {
   display: inline-block;
+  opacity: 0;
   -webkit-mask-image: linear-gradient(101deg, #000 34%, rgba(0,0,0,.45) 43%, transparent 52%);
           mask-image: linear-gradient(101deg, #000 34%, rgba(0,0,0,.45) 43%, transparent 52%);
   -webkit-mask-size: 320% 100%;  mask-size: 320% 100%;
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
   -webkit-mask-position: 100% 0;  mask-position: 100% 0;
-  animation: boot-write 1750ms cubic-bezier(.62, .02, .3, 1) 260ms forwards;
+}
+.boot-word > span.is-writing {
+  opacity: 1;
+  animation: boot-write 820ms cubic-bezier(.62, .02, .3, 1) forwards;
+}
+.boot-word > span.is-leaving {
+  opacity: 0;
+  transition: opacity 260ms ease;
+  animation: none;
+  -webkit-mask-position: 0 0; mask-position: 0 0;
 }
 @keyframes boot-write {
   to { -webkit-mask-position: 0 0; mask-position: 0 0; }
@@ -1163,9 +1174,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   }
   .wp-b, .map-pin .pulse, .boot-bg { animation: none; }
   .dock-app { width: var(--dock-size) !important; height: var(--dock-size) !important; }
-  .boot-word > span {
+  .boot-word > span,
+  .boot-word > span.is-writing {
     animation: none;
+    opacity: 1;
     -webkit-mask-image: none; mask-image: none;
   }
+  .boot-word > span.is-leaving { opacity: 0; transition: none; }
   .boot-skip { opacity: 1; animation: none; }
 }
