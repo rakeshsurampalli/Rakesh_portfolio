@@ -153,16 +153,27 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   user-select: none;
 }
 
-/* The word is revealed by sliding a soft-edged mask across it, angled to
-   follow the slant of the script, so it reads as being written. */
+/* Each greeting is revealed by sliding a soft-edged mask across it, angled to
+   follow the slant of the script, so it reads as being written. script.js
+   restarts the animation per word by toggling .is-writing. */
 .boot-word > span {
   display: inline-block;
+  opacity: 0;
   -webkit-mask-image: linear-gradient(101deg, #000 34%, rgba(0,0,0,.45) 43%, transparent 52%);
           mask-image: linear-gradient(101deg, #000 34%, rgba(0,0,0,.45) 43%, transparent 52%);
   -webkit-mask-size: 320% 100%;  mask-size: 320% 100%;
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
   -webkit-mask-position: 100% 0;  mask-position: 100% 0;
-  animation: boot-write 1750ms cubic-bezier(.62, .02, .3, 1) 260ms forwards;
+}
+.boot-word > span.is-writing {
+  opacity: 1;
+  animation: boot-write 820ms cubic-bezier(.62, .02, .3, 1) forwards;
+}
+.boot-word > span.is-leaving {
+  opacity: 0;
+  transition: opacity 260ms ease;
+  animation: none;
+  -webkit-mask-position: 0 0; mask-position: 0 0;
 }
 @keyframes boot-write {
   to { -webkit-mask-position: 0 0; mask-position: 0 0; }
@@ -280,7 +291,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .win-safari   { left: 250px; top: 90px;  width: 960px; height: 640px; }
 .win-mail     { left: 360px; top: 130px; width: 640px; height: 520px; }
 .win-photos   { left: 290px; top: 110px; width: 900px; height: 600px; }
-.win-about    { left: 470px; top: 150px; width: 520px; height: 470px; }
+.win-about    { left: 470px; top: 130px; width: 520px; height: 592px; }
 
 .window.is-open { display: flex; opacity: 1; transform: none; }
 .window.is-min  { display: flex; opacity: 0; transform: scale(.5) translateY(40vh); pointer-events: none; }
@@ -392,8 +403,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .fm-people .is-selected { background: var(--accent-glass); border: 1px solid rgba(10, 132, 255, .28); }
 .fm-face {
   width: 34px; height: 34px; border-radius: 50%;
-  object-fit: contain; padding: 2px;
+  object-fit: cover;
   background: rgba(255,255,255,.08); flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18);
 }
 .fm-dot {
   width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
@@ -460,9 +472,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .fm-card-head { display: flex; gap: 14px; align-items: center; }
 .fm-avatar {
   width: 58px; height: 58px; border-radius: 50%;
-  object-fit: contain; padding: 3px;
+  object-fit: cover;
   background: rgba(255, 255, 255, .07);
-  border: 1px solid var(--line-2); flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, .22); flex-shrink: 0;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, .8), inset 0 1px 0 rgba(255, 255, 255, .3);
 }
 .fm-card h1 { font-family: var(--font-display); font-size: 26px; line-height: 1.1; font-weight: 400; letter-spacing: -.01em; }
 .fm-role { font-size: 12.5px; color: var(--text-2); }
@@ -835,27 +848,67 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ============================================================
    About This Engineer
    ============================================================ */
+.win-about {
+  /* the most glass of the lot: a small panel with little dense text can afford it */
+  background: rgba(22, 24, 40, .58);
+}
 .about-body {
-  
+  position: relative;
   flex-direction: column; align-items: center;
-  padding: 22px 26px 24px; overflow-y: auto; text-align: center;
+  padding: 26px 26px 24px; overflow-y: auto; text-align: center;
 }
+/* light pooling behind the portrait */
+.about-body::before {
+  content: '';
+  position: absolute; top: -30px; left: 50%;
+  width: 300px; height: 220px;
+  transform: translateX(-50%);
+  background: radial-gradient(50% 58% at 50% 50%, rgba(10, 132, 255, .34), transparent 70%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+/* sheen along the top edge, the way a frosted panel catches light */
+.about-body::after {
+  content: '';
+  position: absolute; inset: 0 0 auto 0; height: 45%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .07), transparent);
+  pointer-events: none;
+}
+.about-body > * { position: relative; z-index: 1; }
 .ab-face {
-  width: 84px; height: 84px; border-radius: 50%;
-  object-fit: contain; padding: 4px;
-  background: rgba(255, 255, 255, .06); border: 1px solid var(--line-2);
+  flex: 0 0 auto;
+  width: 92px; height: 92px; border-radius: 50%;
+  object-fit: cover;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .28);
+  box-shadow:
+    0 0 0 7px rgba(255, 255, 255, .05),
+    0 14px 34px -10px rgba(0, 0, 0, .85),
+    inset 0 1px 0 rgba(255, 255, 255, .35);
 }
-.ab-name { font-family: var(--font-display); font-size: 28px; font-weight: 400; margin-top: 10px; }
+.ab-name { font-family: var(--font-display); font-size: 29px; font-weight: 400; margin-top: 12px; }
 .ab-ver { font-size: 12.5px; color: var(--text-3); }
-.ab-spec { width: 100%; margin-top: 18px; border-top: 1px solid var(--line); text-align: left; }
+.ab-spec {
+  flex: 0 0 auto;
+  width: 100%; margin-top: 20px; text-align: left;
+  padding: 2px 14px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .12);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10);
+  overflow: hidden;
+}
 .ab-spec > div {
   display: grid; grid-template-columns: 92px 1fr; gap: 12px;
-  padding: 7px 0; border-bottom: 1px solid var(--line);
+  padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, .07);
 }
+.ab-spec > div:last-child { border-bottom: 0; }
 .ab-spec dt { font-size: 11.5px; color: var(--text-3); text-align: right; }
 .ab-spec dd { font-size: 12.5px; color: var(--text-1); }
 .ab-ok { color: var(--green); }
-.ab-actions { display: flex; gap: 8px; margin-top: 18px; }
+.ab-actions { flex: 0 0 auto; display: flex; gap: 8px; margin-top: 18px; }
 
 /* ============================================================
    Menu bar dropdowns
@@ -1121,9 +1174,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   }
   .wp-b, .map-pin .pulse, .boot-bg { animation: none; }
   .dock-app { width: var(--dock-size) !important; height: var(--dock-size) !important; }
-  .boot-word > span {
+  .boot-word > span,
+  .boot-word > span.is-writing {
     animation: none;
+    opacity: 1;
     -webkit-mask-image: none; mask-image: none;
   }
+  .boot-word > span.is-leaving { opacity: 0; transition: none; }
   .boot-skip { opacity: 1; animation: none; }
 }
