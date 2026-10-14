@@ -23,7 +23,8 @@ Each of these caused a real bug when violated. Do not undo them.
 6. **Percentage `max-height` on logos does not work.** It has to resolve through the grid area and silently no-ops when it can't, letting a 640px logo render full size. Use an absolute cap (see `.fd-thumb img`).
 7. **Reduced motion** is handled in CSS; use `reduceMotion()` from `script.js` before adding any JS-driven animation.
 8. **The boot screen is `.js`-scoped.** `.boot { display: none }` with `.js .boot { display: grid }`. Never make it visible unconditionally — without JavaScript nothing would ever remove it and the site would be a dead purple screen. `initBoot()` owns dismissal and must always call its `onDone` callback.
-9. **The "hello" reveal is a mask slide, not a stroke draw.** Pacifico glyphs are filled outlines; `stroke-dasharray` on them traces the outline, not the pen stroke. Keep `mask-position` animation.
+9. **Greetings are Latin-only.** `GREETINGS` in `script.js` cycles hello / bonjour / welcome. Pacifico covers Latin only — adding a Devanagari or CJK greeting renders tofu unless you also ship a font for it.
+9b. **The greeting reveal is a mask slide, not a stroke draw.** Pacifico glyphs are filled outlines; `stroke-dasharray` on them traces the outline, not the pen stroke. Keep `mask-position` animation.
 10. **Resize grips live inside the frame.** `.window` is `overflow: hidden`, which clips hit-testing as well as paint, so a grip at a negative offset cannot be clicked. Keep `.rs-*` at `0`, never negative.
 11. **Placement reserves `iconGutter = 128` on the right.** Without it the default Terminal position lands on top of the desktop icons.
 12. **Never try to iframe GitHub or LinkedIn.** `X-Frame-Options: deny` / `frame-ancestors 'self'`. Tabs marked `data-noframe="1"` render the blocked card instead; that is correct behaviour, not a bug to fix.
